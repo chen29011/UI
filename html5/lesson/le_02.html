@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background</title>
+    <style type="text/css">
+        body {
+            background: url("../images/p2.jpeg") no-repeat;
+            background-size: 100% 950px;
+        }
+
+        #p1 {
+            padding: 10px;
+            width: 490px;
+            background-color: aqua;
+        }
+
+        #div1 {
+            width: 510px;
+            height: 340px;
+            background-image: url("../images/p1.jpg");
+        }
+
+        #p2 {
+            padding: 10px;
+            width: 490px;
+            background-color: red;
+            text-align: left;
+            /*首行缩进*/
+            text-indent: 2em;
+            text-wrap: normal;
+        }
+
+        /*修改文本大小写*/
+        #p3 {
+            text-transform: capitalize;
+        }
+
+        #p4 {
+            text-transform: lowercase;
+            /*设置阴影*/
+            text-shadow: 5px 5px 2px red;
+        }
+
+        #p5 {
+            text-transform: uppercase;
+        }
+
+        /*修改点击前后中颜色*/
+        #a1:link {
+            color: red;
+            /*清除下划线*/
+            text-decoration: none;
+            /*设置背景颜色*/
+            background-color: chartreuse;
+        }
+
+        #a1:visited {
+            color: gray;
+        }
+
+        #a1:hover {
+            color: blue;
+        }
+
+        #a1:active {
+            color: coral;
+        }
+
+        /*CSS列表属性允许你放置、改变列表标志，或者将图像作为列表标志;
+        属性有：
+        list-style(简写列表项),
+        list-style-image(列表项图像),
+        list-style-position(列表标志位置),
+        list-style-type(列表类型)*/
+        #div2{
+            width: 510px;
+            height: 340px;
+            background: url("../images/p3.jpg") no-repeat;
+        }
+        #div2 ul{
+            list-style: url("../images/hand.png") outside;
+        }
+    </style>
+</head>
+<body>
+<p id="p1">慢慢的，我也学着放下了。不是我变了，是我真的无能为力了，我认输了，我折腾不动了。</p>
+
+<p id="p2">我从来没有想到会遇到这种场面，从进人这个迷局开始，从来没有出现过同伴不信任我这样的事情。
+    一路过来，我一直怀疑这个怀疑那个.如今也终于轮到我被怀疑了吗？
+    不，这绝对不可以，如果我的同伴不再信任我，那我在这个谜闭里所有能够依靠的东西就都没了。</p>
+
+<p id="p3">this is a new page!</p>
+
+<p id="p4">this is a new page!</p>
+
+<p id="p5">this is a new page!</p>
+
+<a id="a1" href="http://chenqiong.net">个人相册</a>
+
+<div id="div1">
+    <a href="../images/p1.jpg">image</a>
+</div>
+<div id="div2">
+    <ul>
+        <li>用户管理</li>
+        <li>外卖订餐</li>
+        <li>预约订座</li>
+        <li>扫码点餐</li>
+        <li>订单查看</li>
+    </ul>
+</div>
+</body>
+</html>
