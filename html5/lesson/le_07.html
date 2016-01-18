@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS定位</title>
+    <style type="text/css">
+        #div1{
+            width:100px;
+            height: 100px;
+            background-color: aquamarine;
+            position: relative;
+            left: 100px;
+            top:20px;
+            z-index: 2;
+        }
+        #div2{
+            width:100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            left: 80px;
+            top:10px;
+            z-index: 1;
+
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<script type="text/javascript" >
+    for(var i= 0;i < 100; i++ ){
+        document.write(i+"<br/>");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style type="text/css">
+        [title] {
+            color: aqua;
+        }
+
+        [href="http://chenqiong.net"] {
+            font-size: 30px;
+        }
+
+        [title~="title"] {
+            font-size: 40px;
+            color: darkorange;
+        }
+        /*后代选择器*/
+        p strong {
+            color: red;
+        }
+
+        /*隔代选择器*/
+        span>i{
+            color: darkmagenta;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<p title="">hello</p>
+<a href="http://chenqiong.net">极客学院</a>
+
+<p title="tit">扣子第一颗就扣错了，往往到最后一颗才发觉。</p>
+<p title="title">扣子第一颗就扣错了，往往到最后一颗才发觉。</p>
+<p title="t">扣子第一颗就扣错了，往往到最后一颗才发觉。</p>
+<p title="title say">扣子第一颗就扣错了，往往到最后一颗才发觉。</p>
+
+<p>This is my <strong>web <i>hello</i></strong> page!</p>
+
+<span>This is my <strong>web <i>hello</i> hello</strong> page!</span>
+</body>
+</html>
