@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jQuery.print.js"></script>
+    <style type="text/css" media="print">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        td {
+            margin: 0px;
+            padding-left: 10px;
+            width: 17%;
+            text-align: center;
+
+        }
+
+        .eatName {
+            padding: 0px;
+            text-align: left;
+            width: 49%;
+        }
+    </style>
+</head>
+<body>
+餐厅名称：洛阳南关小碗牛肉汤<br/>
+=======================================
+<div id="ele3">
+    <table>
+        <tr>
+            <td class="eatName">菜品名称</td>
+            <td>数量</td>
+            <td>单价</td>
+            <td>总价</td>
+        </tr>
+        <tr>
+            <td class="eatName">宫保鸡丁盖饭</td>
+            <td>2</td>
+            <td>16.0</td>
+            <td>32.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">土豆炖牛腩饭</td>
+            <td>1</td>
+            <td>16.0</td>
+            <td>16.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">牛肉拉面</td>
+            <td>2</td>
+            <td>16.0</td>
+            <td>32.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">西红柿鸡蛋面</td>
+            <td>1</td>
+            <td>10.0</td>
+            <td>10.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">滋补烩面</td>
+            <td>1</td>
+            <td>28.0</td>
+            <td>28.0</td>
+        </tr>
+
+    </table>
+    ------------------------------------------------------------------<br/>
+    合计：118.0<br/>
+    收货人：王冰冰<br/>
+    收货人手机号：12345678910<br/>
+    收货人地址：开元大道与长厦门街交叉口 863创智广场1号楼9楼<br/>
+    =======================================<br/>
+    谢谢您的惠顾，欢迎您再次光临！<br/>
+    请保留小票&nbsp;&nbsp;2010-3-15 11:38:39<br/>
+    <button class="avoid-this">
+       打印
+    </button>
+</div>
+
+<script type='text/javascript'>
+    //<![CDATA[
+    $(function () {
+        $("#ele3").find('button').on('click', function () {
+            //Print ele4 with custom options
+            $("#ele3").print({
+                //Use Global styles
+                globalStyles: false,
+                //Add link with attrbute media=print
+                mediaPrint: false,
+                //Custom stylesheet
+                stylesheet: "http://fonts.useso.com/css?family=Inconsolata",
+                //Print in a hidden iframe
+                iframe: false,
+                //Don't print this
+                noPrintSelector: ".avoid-this",
+                //Add this at top
+                prepend: "Hello World!!!<br/>",
+                //Add this on bottom
+                append: "<br/>Buh Bye!"
+            });
+        });
+        // Fork https://github.com/sathvikp/jQuery.print for the full list of options
+    });
+</script>
+</body>
+</html>

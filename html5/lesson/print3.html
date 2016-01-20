@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" language="javascript">
+        function print() {
+            try
+            {
+                var objfs=new ActiveXObject("Scripting.FileSystemObject");
+                var objprinter = objfs.CreateTextFile("USB001", true);
+            }catch(Error)
+            {
+                alert("无法获取Active插件，或者LPT1端口未连接打印机。错误信息："+Error.Message);
+                return;
+            }
+            objprinter.Writeline("");
+            objprinter.Writeline("              小票              ");
+            objprinter.Writeline("———————————————————————————————");
+            objprinter.Writeline('<%=Model.NumberID %>');
+            objprinter.Writeline('门店编码:<%=Model.StoreCode%>');
+            objprinter.Writeline('门店名称:<%=ViewData["werks"]%>');
+        }
+    </script>
+</head>
+<body onload="print()">
+
+</body>
+</html>
