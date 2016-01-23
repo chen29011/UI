@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jQuery.print.js"></script>
+</head>
+<body>
+<div id="ddd">
+    <table>
+        <tr>
+            <td class="eatName">菜品名称</td>
+            <td>数量</td>
+            <td>单价</td>
+            <td>总价</td>
+        </tr>
+        <tr>
+            <td class="eatName">宫保鸡丁盖饭</td>
+            <td>2</td>
+            <td>16.0</td>
+            <td>32.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">土豆炖牛腩饭</td>
+            <td>1</td>
+            <td>16.0</td>
+            <td>16.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">牛肉拉面</td>
+            <td>2</td>
+            <td>16.0</td>
+            <td>32.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">西红柿鸡蛋面</td>
+            <td>1</td>
+            <td>10.0</td>
+            <td>10.0</td>
+        </tr>
+        <tr>
+            <td class="eatName">滋补烩面</td>
+            <td>1</td>
+            <td>28.0</td>
+            <td>28.0</td>
+        </tr>
+    </table>
+</div>
+<div id=win
+     style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; border:1px solid #888; background-color:#edf; text-align:center">
+    这是DIV登录框示例<br>
+    <a style="margin-top: 350px;" href="javascript:closeLogin();">关闭登录框</a>
+</div>
+<script>
+    function openLogin() {
+        document.getElementById("win").style.display = "";
+    }
+    function closeLogin() {
+        document.getElementById("win").style.display = "none";
+    }
+</script>
+<a href="javascript:openLogin();">打开登录框</a>
+
+
+<input type="button" onclick=" a()" value="打印"/>
+<script language="javascript">
+    function a() {
+        $("#ddd").print();
+    }
+</script>
+</body>
+</html>
