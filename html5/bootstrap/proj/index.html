@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <title>Title</title>
 </head>
 <body>
-    <div class="onepage">
-        <div class="onepage-bg" id="onepagebg"></div>
-        <div class="container">
-            <div class="row">
-                <div class="title-text">
-                    <div class="col-md-12 headfontsize">
-                        <h1 class="headh1content">
-                            美之色<br>在这里你可以<br>分享生活的点点滴滴
-                        </h1>
-                        <p style="margin-top:50px;">趁一切还在，好好珍惜身边的点滴；<br>趁一切还来的及，别为将来埋下亏欠与叹息。</p>
-                        <p class="btn-app-store">
-                            <a class="btn btn-success btn-lg">立即注册，开始分享</a>
-                        </p>
-                    </div>
+<div class="onepage">
+    <div class="onepage-bg" id="onepagebg"></div>
+    <div class="container">
+        <div class="row">
+            <div class="title-text">
+                <div class="col-md-12 headfontsize">
+                    <h1 class="headh1content">
+                        美之色<br>在这里你可以<br>分享生活的点点滴滴
+                    </h1>
+                    <p style="margin-top:50px;">趁一切还在，好好珍惜身边的点滴；<br>趁一切还来的及，别为将来埋下亏欠与叹息。</p>
+                    <p class="btn-app-store">
+                        <a class="btn btn-success btn-lg">立即注册，开始分享</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <div class="twopage">
     <div class="twopage-text">
         <h1 class="twopage-text-h1">
@@ -59,8 +61,101 @@
                 </div>
             </a>
         </div>
+        <div class="twopage-courses col-md-4">
+            <a href="#">
+                <img src="../../images/bg_01.jpg" style="width:100%;">
+                <div class="classicon">
+                    <h3>认真分享哟</h3>
+                    <h1><strong>分享这个图片</strong></h1>
+                </div>
+            </a>
+        </div>
+        <div class="twopage-courses col-md-4">
+            <a href="#">
+                <img src="../../images/bg_02.jpg" style="width:100%;">
+                <div class="classicon">
+                    <h3>认真分享哟</h3>
+                    <h1><strong>分享这个图片</strong></h1>
+                </div>
+            </a>
+        </div>
+        <div class="twopage-courses col-md-4">
+            <a href="#">
+                <img src="../../images/bg_03.jpg" style="width:100%;">
+                <div class="classicon">
+                    <h3>认真分享哟</h3>
+                    <h1><strong>分享这个图片</strong></h1>
+                </div>
+            </a>
+        </div>
         <div class="twopagebtn">
             <a id="twopage-easy" href="#" class="btn btn-success btn-lg">如果你想分享，快快点这里</a>
+        </div>
+    </div>
+</div>
+<div class="threepage">
+    <div class="threepage-bg" id="threepagebg">
+        <div class="threepagecontent">
+            <div class="threepagetext">
+                <h1>丽江古城</h1>
+                <p>清晨薄雾，烟柳画桥。走在光滑石板上，看静水流深。品一壶茶，品一段静默时光；<br>饮几杯酒，饮几番离合悲欢。
+                    我在尘世中，你在我心上，丽江！</p>
+            </div>
+            <a href="#" class="btn btn-success btn-lg threepagebtncontent">现在注册，开始分享之旅吧</a>
+        </div>
+    </div>
+    <div class="fourpage">
+        <div class="continer" style="width:70%;text-align: center">
+            <div class="coursexingging-text"></div>
+            <h1>要干活，必须要工具到位</h1>
+            <p>怎么才能做到最快速的学习呢，你猜么？</p>
+
+            <div id="carousel-example-generic" class="carousel slide" data-interval="5000" style="heigth:300px">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" style="margin-top:200px">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" style="width:60%">
+                        <img src="../../images/bg_01.jpg" alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                    <div class="item" style="width:60%">
+                        <img src="../../images/bg_02.jpg" alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                    <div class="item" style="width:60%">
+                        <img src="../../images/bg_03.jpg" alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                    <div class="item" style="width:60%">
+                        <img src="../../images/bg_04.jpg" alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
