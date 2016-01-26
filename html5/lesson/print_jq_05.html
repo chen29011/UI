@@ -3,14 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .eatName {
+            text-align: left;
+        }
+
+        span {
+            font-size: large;
+        }
+
+        div {
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 3px;
+            font-size: large;
+        }
+    </style>
     <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../js/jQuery.print.js"></script>
 </head>
 <body>
 <div id="ddd">
-    <table>
+    <p style="width:300px;text-align: center;font-size: 25px;">香格里拉大酒店</p>
+
+    <div><span>客位:NO005</span><span style="margin-left: 100px;">收银员:阿兰</span></div>
+    <div><span>单号:50000001</span><span style="margin-left: 100px;">人数:5</span></div>
+    <span>时间:2015年12月12日 12:30:35</span>
+
+    <h1 style="font-weight: bolder">=================</h1>
+    <table style="width:300px;font-size: large">
         <tr>
-            <td class="eatName">菜品名称</td>
+            <td>品称</td>
             <td>数量</td>
             <td>单价</td>
             <td>总价</td>
@@ -46,13 +80,24 @@
             <td>28.0</td>
         </tr>
     </table>
+    <h1 style="font-weight: bolder">=================</h1>
+
+    <p>消费合计:102.00元</p>
+
+    <p>折扣:0.00元</p>
+
+    <p>应收现金:102.00元</p>
+    <br>
+
+    <p style="width:300px; text-align: center">谢谢光临&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎再来</p>
 </div>
-<div id=win
+<!--<div id=win
      style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; border:1px solid #888; background-color:#edf; text-align:center">
     这是DIV登录框示例<br>
     <a style="margin-top: 350px;" href="javascript:closeLogin();">关闭登录框</a>
-</div>
+</div>-->
 <script>
+    ;
     function openLogin() {
         document.getElementById("win").style.display = "";
     }

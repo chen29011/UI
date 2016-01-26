@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>句柄</title>
+    <link rel="stylesheet" type="text/css" href="le_01.css">
+</head>
+<body>
+<div id="div" class="div">
+
+</div>
+<button id="button" onclick="changeColor();">点我更换颜色</button>
+<br>
+<button id="btn2">按钮</button>
+<br>
+<button id="btn3">按钮3</button>
+<script type="text/javascript">
+    function changeColor() {
+        document.getElementById("div").style.background = "red";
+    }
+    //句柄的作用,添加多个事件不会覆盖
+    document.getElementById("btn2").addEventListener("click", function () {
+        alert("Hello");
+    });
+    var x = document.getElementById("btn3");
+    x.addEventListener("click", hello);
+    x.addEventListener("click", world);
+    x.removeEventListener("click", world);
+    function hello() {
+        alert("Hello");
+    }
+    function world() {
+        alert("World");
+    }
+
+</script>
+</body>
+</html>

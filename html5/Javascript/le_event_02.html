@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件详解</title>
+</head>
+<body>
+<div id="div1" class="div1">
+    <button id="btn1" class="btn1">按钮</button>
+    <button id="btn2" class="btn2">按钮2</button>
+    <button id="btn3" class="btn2">按钮3</button>
+</div>
+<script type="text/javascript">
+    var btn1 = document.getElementById("btn1");
+    btn1.onclick = function () {
+        alert("Hello World,DOM 0级事件处理程序");
+    };
+
+    //清除时间
+    btn1.onclick = null;
+
+    //事件会被覆盖掉
+    btn1.onclick = function () {
+        alert("Hello World,DOM 0级事件处理程序2");
+    };
+</script>
+
+<script type="text/javascript">
+    //句柄的作用,添加多个事件不会覆盖
+    var x = document.getElementById("btn2");
+    x.addEventListener("click", hello);
+    x.addEventListener("click", world);
+
+    function hello() {
+        alert("Hello");
+    }
+    function world() {
+        alert("World");
+    }
+</script>
+
+<script type="text/javascript">
+    document.getElementById("btn3").addEventListener("click", showType);
+    document.getElementById("div1").addEventListener("click", showDiv);
+    function showType(event) {
+        alert(event.type);
+        event.stopPropagation();//阻止事件冒泡
+    }
+
+    function showDiv(){
+        alert("div");
+    }
+</script>
+</body>
+</html>
