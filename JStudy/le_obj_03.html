@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript对象</title>
+</head>
+<body onload="timeTicker();">
+<div id="div1"></div>
+<script>
+
+    document.write("<h1>String对象</h1>");
+    var obj = "zhangsan,lisi,wangwu,zhaoliu";
+    var sarr = obj.split(",");
+    for (var i = 0; i < sarr.length; i++) {
+        document.write(sarr[i]);
+        document.write("<br>");
+    }
+    document.write("<h1>Date日期对象</h1>");
+    var date = new Date();
+    document.write(date + "<br>");
+    document.write(date.getHours() + "<br>");
+    document.write(date.getFullYear() + "年" + date.getMonth() + "月" + date.getDay() + "日" + "<br>");
+
+
+    document.write("<h1>时钟的应用</h1>");
+
+    function timeTicker() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkLength(m);
+        s = checkLength(s);
+        document.getElementById("div1").innerHTML = h + ":" + m + ":" + s;
+        setTimeout(function () {
+            timeTicker();
+        }, 1000);
+    }
+
+    function checkLength(p) {
+        if (p < 10) {
+            p = "0" + p;
+        }
+        return p;
+    }
+
+    document.write("<h1>数组对象</h1>");
+    var arr = ["zhao", "li", "chen", "zhang", "wang", "qin", "ying"];
+    var arr2 = ["sun", "xu"];
+    //合并数组
+    var arr3 = arr.concat(arr2);
+    document.write(arr3 + "<br>");
+    //数组排序
+    var arr4 = [1, 5, 6, 2, 9, 7];
+    document.write(arr4.sort(function (a, b) {
+        //降序排序
+        return b - a;
+    }));
+
+    //数组追加
+    var arr5= ["a","b"];
+    arr5.push("c");
+    document.write("<br>"+arr5);
+    //数组翻转
+    document.write("<br>"+arr5.reverse());
+
+    document.write("<h1>Math对象</h1>");
+    //round()四舍五入
+    document.write(Math.round(2.5)+"<br>");
+    //random()随机数
+    document.write(Math.random()+"<br>");
+    document.write(parseInt(Math.random()*10)+"<br>");
+    //max()返回最高值
+    document.write(Math.max(12,24,23,455,33,22,11)+"<br>");
+    //min()返回最低值
+    document.write(Math.min(12,24,23,455,33,22,11)+"<br>");
+    //abs()返回绝对值
+    document.write(Math.abs(-23)+"<br>");
+</script>
+</body>
+</html>
